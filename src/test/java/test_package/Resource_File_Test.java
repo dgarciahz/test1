@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import test.HelloWorld;
 
-public class Resource_File_Test1 {
+public class Resource_File_Test {
   @Test
   public void f1() throws Exception { 
 	  System.err.println("INIC");
