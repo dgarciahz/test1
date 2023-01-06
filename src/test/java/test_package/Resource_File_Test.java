@@ -18,14 +18,14 @@ public class Resource_File_Test {
 	  
 //	  InputStream input = new FileInputStream("testfile.properties");
 	  InputStream input =null;
-	  input=Resource_File_Test1.class.getClassLoader().getResourceAsStream("testfile.properties");
+	  input=Resource_File_Test.class.getClassLoader().getResourceAsStream("testfile.properties");
       p.load(input);
       
       assert(p.getProperty("prop1").equals("1"));
       assert(p.getProperty("prop2").equals("2"));
       assert(p.getProperty("prop3")==null);
 
-      input=Resource_File_Test1.class.getClassLoader().getResourceAsStream("props_dir/testfile2.properties");
+      input=Resource_File_Test.class.getClassLoader().getResourceAsStream("props_dir/testfile2.properties");
       p.load(input);
       assert(p.getProperty("prop1").equals("1"));
       assert(p.getProperty("prop2").equals("modified"));
